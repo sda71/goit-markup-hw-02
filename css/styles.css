@@ -1,161 +1,201 @@
-/* переменные для замены цвета подсветки в будущем */
-:root {
-  --accent-color: #404bbf;
-  --primary-font: "Roboto";
-  --secondary-font: "Raleway", sans-serif;
-}
+/* Primary text COLOR #434455 */
+/* Secondary text COLOR #2E2F42 */
 
-/* _____________ предок - шрифт 
-Будет наследование остальными элементами этого шрифта,
- кроме указанного другого---------------- */
+/* Main Background color #ffffff */
+/* Secondary Bachground color #F4F4FD */
+
+/* Main BUTTON FONT-COLOR  #fffffff */
+/* Main BUTTON BACKGROUND-COLOR #4D5AE5;*/
+/* ACCENT COLOR #404BBF */
+
+/* -------COMMON STYLE FOR BODY ----------------- */
+:root {
+  --primary-text-color: #434455;
+  --secondary-text-color: #2e2f42;
+  --main-background-color: #ffffff;
+  --secondary-background-color: #f4f4fd;
+  --accent-color: #404bbf;
+  --no-active-color: #4d5ae5;
+  --third-text-color: #e7e9fc;
+}
 
 body {
-  font-family: var(--primary-font);
-}
+  color: var(--primary-text-color);
+  background-color: var(--main-background-color);
 
-/* --------------- COMPONENTS ---------------- */
-
-.title-h3 {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-}
-
-.subtitle {
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
 }
-
-/* --------------- /COMPONENTS ---------------- */
-
-/* ----------HEADER---------------------- */
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
-
-.logo-web {
-  font-family: var(--secondary-font);
+/* ------------------ LOGOTYPE -------------------*/
+.logo {
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+}
+.logo.head {
+  color: var(--secondary-text-color);
+}
+
+.logo.foot {
+  color: var(--secondary-background-color);
+}
+.logo .logo-web {
+  color: var(--no-active-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.logo-studio {
-  font-family: var(--secondary-font);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #2e2f42;
+.logo.foot .logo-web {
+  text-shadow: none;
 }
-
-.menu-link {
+.foot-background {
+  background-color: var(--secondary-text-color);
+}
+.foot-text {
+  color: var(--third-text-color);
+}
+/* -------------------------- /LOGOTYPE ----------------------- */
+/* ------------ Site NAV ---------------- */
+.site-nav .link {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+  line-height: 1.5;
+  color: var(--secondary-text-color);
 }
-/* Colorizing from me))) */
-.menu-link:hover,
-.menu-link:focus,
-.contact-phone:hover,
-.contact-phone:focus,
-.contact-mail:hover,
-.contact-mail:focus {
+/* Подсвечиваем ТЕКУЩУЮ ссылку на страницу в шапке, создаем новый класс .current */
+.site-nav .link.current {
   color: var(--accent-color);
 }
 
-.contact-mail {
-  font-weight: 400;
+.site-contacts .link {
   font-size: 16px;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  color: #434455;
+  line-height: 1.5;
+  color: var(--primary-text-color);
 }
-
-.contact-phone {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  color: #434455;
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-contacts .link:hover,
+.site-contacts .link:focus {
+  color: var(--accent-color);
 }
-/* ---------- /HEADER---------------------- */
-
-/* --------------- HERO -------------------- */
-
-.hero {
-  background: #2e2f42;
-}
+/* -------------------------- HERO --------------------------------------- */
 .hero-title {
   font-weight: 700;
+  text-align: center;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-}
-.btn-order {
-  padding: 16px 32px;
-  margin: 0 auto;
-  background-color: #4d5ae5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 
+  color: var(--main-background-color);
+  background-color: var(--secondary-text-color);
+}
+.button-order {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.33;
+  line-height: 1.5;
+  align-items: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+
+  color: var(--main-background-color);
+  background-color: var(--no-active-color);
   cursor: pointer;
 }
-.btn-order:hover,
-.btn-order:focus {
+.button-order:hover,
+.button-order:focus {
   background-color: var(--accent-color);
 }
-/* --------------- /HERO -------------------- */
 
-/* ----------------- Footer --------------- */
+/* -------------------------- / HERO -------------------------------------- */
 
-.page-footer {
-  background-color: #2e2f42;
+/* -------------------------- Features + Work + Team-------------------------------------- */
+
+.features-title,
+.work-title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  /* text-transform: capitalize; */
+  color: var(--secondary-text-color);
 }
-.logo-web-footer {
-  font-family: var(--secondary-font);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #4d5ae5;
+.features-list .title,
+.work-list .title,
+.team-list .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
 }
-.logo-studio-footer {
-  font-family: var(--secondary-font);
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #f4f4fd;
-}
-.text-footer {
-  font-weight: 400;
+
+/* -------------------------- WORK -------------------------------------- */
+/* .work-title {
+  color: var(--secondary-text-color); 
+}*/
+/* .work-list .title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--secondary-text-color);
+} */
+/* -------------------------- TEAM -------------------------------------- */
+/* .team-title {
+  color: var(--secondary-text-color); 
+}*/
+/* .team-list .title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--secondary-text-color);
+} */
+/* ---------- PORTFOLIO COLORS ---------------------- */
+
+/* Button BACKGROUND-COLOR #F4F4FD; */
+/* Button FONT-COLOR #4D5AE5 */
+/* ACCENT Button BACKGROUND #404BBF */
+/* ACCENT Biuttn FONT #ffffff */
+
+/* ----------------------- PORTFOLIO ---------------------------- */
+
+.button-portfolio {
+  font-family: inherit;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  color: #e7e9fc;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--no-active-color);
+  background-color: var(--secondary-background-color);
+  cursor: pointer;
 }
-/* ----------------- /Footer --------------- */
+.button-portfolio:hover,
+.button-portfolio:focus {
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+}
+
+.cards .title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--secondary-text-color);
+}
+/* Убирал фиолетовый цвет абзацев внутри ссылок на страничке портфолио. Наследование главного цвета из <body> внутри ссылок не работает */
+a.text {
+  color: var(--primary-text-color);
+}
+/* ???????????????????? ЧУШЬ!!!!!!!!!!!!! */
+/* p {
+  color: var(--primary-text-color);
+} */
