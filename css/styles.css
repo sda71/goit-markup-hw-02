@@ -136,6 +136,9 @@ body {
   text-transform: capitalize;
   color: var(--secondary-text-color);
 }
+.team {
+  background-color: var(--secondary-background-color);
+}
 
 /* ---------- PORTFOLIO COLORS ---------------------- */
 
