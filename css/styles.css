@@ -137,28 +137,6 @@ body {
   color: var(--secondary-text-color);
 }
 
-/* -------------------------- WORK -------------------------------------- */
-/* .work-title {
-  color: var(--secondary-text-color); 
-}*/
-/* .work-list .title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--secondary-text-color);
-} */
-/* -------------------------- TEAM -------------------------------------- */
-/* .team-title {
-  color: var(--secondary-text-color); 
-}*/
-/* .team-list .title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--secondary-text-color);
-} */
 /* ---------- PORTFOLIO COLORS ---------------------- */
 
 /* Button BACKGROUND-COLOR #F4F4FD; */
@@ -192,10 +170,11 @@ body {
 }
 /* Убирал фиолетовый цвет абзацев внутри ссылок на страничке портфолио. Наследование главного цвета из <body> 
 внутри ссылок не работает */
-a.text {
-  color: var(--primary-text-color);
-}
-/* ???????????????????? ЧУШЬ!!!!!!!!!!!!! */
-/* p {
+/* a.text {
   color: var(--primary-text-color);
 } */
+
+/* Вариант от Сергея Коробки - возможность наследования главного цвета из боди*/
+a.text {
+  color: currentcolor;
+}
